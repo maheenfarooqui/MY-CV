@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- header -->
+        <!-- header -->
 <nav class="navbar navbar-expand-lg sticky-top custom-header">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -40,52 +40,59 @@
         </div>
     </div>
 </nav>
-<!-- hero section -->
- <section class="hero-section d-flex align-items-center">
+<div class="guide-page py-5">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mt-5 mt-lg-0">
-                <div class="hero-badge mb-3">
-                    <span class="badge rounded-pill shadow-sm">New: AI Resume Analysis ✨</span>
-                </div>
-                <h1 class="hero-title mb-4">
-                    The most modern way to build your <span class="text-accent">Career.</span>
-                </h1>
-                <p class="hero-subtitle mb-5">
-                    Create a high-impact, professional resume in minutes. No design skills needed—just your story and our premium templates.
-                </p>
-                <div class="hero-cta d-flex gap-3 align-items-center">
-                    <button class="btn btn-primary-theme rounded-pill px-5 py-3">Build My Resume</button>
-                    <button class="btn btn-link text-primary-theme fw-bold text-decoration-none">
-                        View Templates <i class="bi bi-arrow-right ms-2"></i>
+        <header class="text-center mb-5 pb-4 border-bottom">
+            <span class="text-accent fw-bold text-uppercase small letter-spacing">The Essentials</span>
+            <h1 class="font-serif display-4 text-primary mt-2">Resume Writing Guide</h1>
+            <p class="text-secondary lead mx-auto mt-3" style="max-width: 650px;">
+                A straightforward guide to help you build a high-impact resume that stands out in 2026.
+            </p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                
+                <section class="guide-section mb-5">
+                    <h3 class="font-serif text-primary mb-4">01. Prioritize Readability</h3>
+                    <p class="text-secondary mb-4">
+                        In modern recruitment, "Less is More" is the gold standard. Recruiters spend an average of only 6-7 seconds screening a resume. Always use clean fonts, generous margins, and a balanced layout to ensure your key information is caught instantly.
+                    </p>
+                    <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?q=80&w=1000&auto=format&fit=crop" class="img-fluid rounded-lg shadow-sm mb-4" alt="Minimal Professional Workspace">
+                </section>
+
+                <section class="guide-section mb-5">
+                    <h3 class="font-serif text-primary mb-4">02. Master the Reverse Chronological Order</h3>
+                    <p class="text-secondary">
+                        Always list your most recent work experience or degree at the top. This allows recruiters to immediately see your current level of seniority and most relevant skills.
+                    </p>
+                    <div class="p-4 bg-accent-subtle rounded-md mt-3">
+                        <p class="mb-0 text-primary small fw-semibold">
+                            <i class="bi bi-info-circle-fill me-2"></i> Note: Ensure dates are clearly formatted on the right side or directly under your job title for quick scanning.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="guide-section mb-5">
+                    <h3 class="font-serif text-primary mb-4">03. Quantify Your Achievements</h3>
+                    <p class="text-secondary">
+                        Don't just list your "Responsibilities"—showcase your "Achievements." Use hard numbers to provide context. For example: 
+                        <span class="text-primary fw-bold">"Increased quarterly sales by 20%"</span> is far more powerful than simply saying "Managed sales team."
+                    </p>
+                </section>
+
+                <div class="cta-box text-center py-5 mt-5 rounded-lg shadow-lg">
+                    <h2 class="text-white font-serif mb-4">Ready to land your dream job?</h2>
+                    <button class="btn btn-primary-theme bb bg-accent border-0 text-primary-on-accent rounded-pill px-5 py-3 fw-bold shadow-sm">
+                        Create Your Resume Now
                     </button>
                 </div>
-                <div class="hero-stats mt-5 d-flex gap-4">
-                    <div class="stat-item">
-                        <span class="d-block fw-bold fs-4">10k+</span>
-                        <span class="text-muted small">Resumes Created</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="d-block fw-bold fs-4">4.9/5</span>
-                        <span class="text-muted small">User Rating</span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-lg-6 mt-5 mt-lg-0">
-                <div class="hero-image-wrapper">
-                    <img src="assets/hero.png" alt="Resume Preview" class="img-fluid hero-image">
-                    
-                    <div class="floating-card-1 shadow-lg"></div>
-                    <div class="floating-card-2 shadow-lg"></div>
-                </div>
             </div>
         </div>
     </div>
-</section>
-<!-- footer -->
-<footer class="custom-footer border-top mt-5">
+</div>
+ <footer class="custom-footer border-top mt-5">
     <div class="container py-5">
         <div class="row g-4">
             <div class="col-lg-4 col-md-12">
@@ -146,6 +153,6 @@
         </div>
     </div>
 </footer>
-    <script src="app.js"></script>
+    <script src="app.js"></script>   
 </body>
 </html>
