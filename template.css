@@ -1,0 +1,313 @@
+/* --- SAGE GREEN SYSTEM --- */
+:root {
+    --sage-primary: #5a6e5a;
+    --sage-bg-light: #d8e2dc;
+    --sage-line: #b7c4b7;
+}
+
+.template-sage {
+
+    padding: 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-card {
+    width: 210mm;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Header Styling */
+.sage-header {
+    margin-bottom: 40px;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.sage-profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #eee;
+}
+
+.identity h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32pt;
+    color: var(--sage-primary);
+    margin: 0;
+}
+
+.identity .subtitle {
+    font-style: italic;
+    font-size: 18pt;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 10pt;
+    color: #444;
+}
+
+/* Section Styling */
+.sage-section {
+    margin-bottom: 25px;
+}
+
+.sage-label {
+    text-align: center;
+    font-size: 12pt;
+    color: var(--sage-primary);
+    border-top: 1px solid var(--sage-line);
+    border-bottom: 1px solid var(--sage-line);
+    padding: 6px 0;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Experience & Grid */
+.exp-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11pt;
+}
+
+.exp-row strong {
+    color: #000;
+}
+
+.exp-row em {
+    color: #555;
+}
+
+.sage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Typography Scale */
+p {
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* second one */
+
+
+
+:root {
+    --matteo-gold: #e6a533; /* Exact Gold from your image */
+    --matteo-dark: #1a1a1a;
+    --matteo-gray: #666;
+}
+
+.template-matteo {
+    background: #f4f4f4;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.resume-wrapper {
+    width: 210mm;
+    background: white;
+    padding: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--matteo-gold);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.header-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name-box h1 {
+    font-size: 28pt;
+    margin: 0;
+    font-weight: 800;
+}
+
+.job-title {
+    font-size: 16pt;
+    font-style: italic;
+    color: var(--matteo-gray);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+    font-size: 9pt;
+}
+
+.contact-grid i {
+    color: var(--matteo-gold);
+}
+
+/* Body Layout */
+.main-body {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+}
+
+.section-heading {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #000;
+    border-bottom: 2px solid var(--matteo-gold);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-heading i {
+    font-size: 14pt;
+}
+
+/* Lists & Text */
+.simple-list {
+    list-style: none;
+    padding: 0;
+    font-size: 10pt;
+    line-height: 1.8;
+}
+
+.bullets {
+    padding-left: 18px;
+    font-size: 10pt;
+    margin-top: 8px;
+}
+
+.bullets li {
+    margin-bottom: 5px;
+}
+
+.exp-header {
+    font-size: 11pt;
+    margin-bottom: 2px;
+}
+
+.exp-sub {
+    font-size: 9pt;
+    color: var(--matteo-gray);
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+
+
+
+/* third one */
+/* --- YASSINE TEMPLATE STYLES --- */
+.template-yassine {
+    --y-green: #384d41; /* Exact color from image */
+    --y-light-green: #52665b;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+}
+
+.resume-container {
+    width: 210mm;
+    min-height: 297mm;
+    display: flex;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 38%;
+    background: var(--y-green);
+    color: white;
+    padding: 60px 35px;
+}
+
+.sidebar .name { font-size: 26pt; font-weight: 700; margin-bottom: 5px; }
+.sidebar .title { font-size: 16pt; font-style: italic; color: #ced4d1; margin-bottom: 35px; }
+
+.contact-list { font-size: 9.5pt; margin-bottom: 40px; }
+.contact-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; opacity: 0.9; }
+
+.side-block { margin-bottom: 35px; }
+.side-label { 
+    font-size: 12pt; text-transform: uppercase; letter-spacing: 1px;
+    border-bottom: 1px solid var(--y-light-green); padding-bottom: 5px; margin-bottom: 15px; 
+}
+
+.side-list { list-style: none; padding: 0; font-size: 10pt; line-height: 1.8; }
+.side-list li::before { content: "•"; color: var(--y-light-green); margin-right: 10px; font-weight: bold; }
+
+.lang-box { font-size: 10pt; margin-bottom: 15px; }
+
+/* Main Content */
+.main-content {
+    width: 62%;
+    padding: 60px 45px;
+    color: #333;
+}
+
+.main-label {
+    font-size: 13pt; font-weight: 700; color: #444;
+    border-bottom: 2px solid #333; padding-bottom: 5px; margin-bottom: 25px;
+}
+
+.exp-item { margin-bottom: 30px; }
+.exp-head { font-size: 11pt; color: #000; }
+.exp-head strong { font-weight: 800; }
+.exp-head span { font-style: italic; color: #555; }
+
+.exp-date { font-size: 9.5pt; color: #777; margin-bottom: 10px; }
+
+.exp-bullets, .cert-list { 
+    padding-left: 20px; font-size: 10pt; line-height: 1.6; color: #444; 
+}
+.exp-bullets li, .cert-list li { margin-bottom: 8px; }
