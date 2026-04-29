@@ -50,19 +50,19 @@
         </div>
 
         <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
-            <button class="btn btn-filter active rounded-pill px-4 py-2">All Templates</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2">Professional</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2">Modern</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2">Creative</button>
+            <button class="btn btn-filter active rounded-pill px-4 py-2" onclick="showAll()">All Templates</button>
+            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showPro()">Professional</button>
+            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showMd()">Modern</button>
+            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showCr()">Creative</button>
         </div>
 
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" id="card1">
                 <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
                     <div class="template-img-container">
                         <img src="assets/green.png" class="card-img-top" alt="Template Preview">
                         <div class="template-overlay">
-                            <button class="btn btn-primary-theme rounded-pill px-4 py-2">Use Template</button>
+                        <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderPro()">Use Template</button>
                         </div>
                     </div>
                     <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
@@ -75,12 +75,12 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div id="card2" class="col-md-6 col-lg-4">
                 <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
                     <div class="template-img-container">
                         <img src="assets/pastel.png" class="card-img-top" alt="Template Preview">
                         <div class="template-overlay">
-                            <button class="btn btn-primary-theme rounded-pill px-4 py-2">Use Template</button>
+                           <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderMd()">Use Template</button>
                         </div>
                     </div>
                     <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
@@ -93,12 +93,12 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4">
+            <div id="card3" class="col-md-6 col-lg-4">
                 <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
                     <div class="template-img-container">
                         <img src="assets/yekk.png" class="card-img-top" alt="Template Preview">
                         <div class="template-overlay">
-                            <button class="btn btn-primary-theme rounded-pill px-4 py-2">Use Template</button>
+                            <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderCr()">Use Template</button>
                         </div>
                     </div>
                     <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
@@ -175,5 +175,6 @@
         </div>
     </div>
 </footer>
+<script src="app.js"></script>
 </body>
 </html>

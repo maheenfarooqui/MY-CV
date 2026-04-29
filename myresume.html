@@ -21,7 +21,7 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg sticky-top custom-header">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
           <div class="logo-box me-2">
             <span class="logo-inner"></span>
           </div>
@@ -61,8 +61,96 @@
       </div>
     </nav>
     <!-- main section -->
+<div class="dashboard-container">
+    <aside class="input-panel custom-scrollbar">
+        <h3 class="section-title">Personal Identity</h3>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="custom-input" id="input-name" placeholder="Yassine Ben Salem">
+        </div>
+        <div class="form-group">
+            <label>Job Title</label>
+            <input type="text" class="custom-input" id="input-title" placeholder="Sales Manager">
+        </div>
+
+        <h3 class="section-title">Contact Links</h3>
+        <div class="form-group">
+            <label><i class="bi bi-linkedin"></i> LinkedIn URL</label>
+            <input type="text" class="custom-input" id="input-linkedin" placeholder="linkedin.com/in/username">
+        </div>
+        <div class="form-group">
+            <label><i class="bi bi-envelope"></i> Email Address</label>
+            <input type="email" class="custom-input" id="input-email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label><i class="bi bi-telephone"></i> Phone Number</label>
+            <input type="text" class="custom-input" id="input-phone" placeholder="+216 55 482 731">
+        </div>
+        <div class="form-group">
+            <label><i class="bi bi-geo-alt"></i> Location</label>
+            <input type="text" class="custom-input" id="input-location" placeholder="Tunis, Tunisia">
+        </div>
+
+        <h3 class="section-title">Professional Summary</h3>
+        <div class="form-group">
+            <textarea class="custom-input" id="input-summary" rows="4" placeholder="Describe your professional background..."></textarea>
+        </div>
+
+        <h3 class="section-title">Skills</h3>
+        <div id="skills-container">
+            <input type="text" class="custom-input mb-2" id="input-skill" placeholder="e.g. Lead Generation">
+        </div>
+        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" onclick="addSkillField()"><i class="bi bi-plus"></i> Add Skill</button>
+
+        <h3 class="section-title">Work Experience</h3>
+        <div id="experience-container" class="mb-3">
+            <div class="card p-3 mb-3 bg-light border-0 shadow-sm">
+                <input type="text" class="custom-input mb-2" placeholder="Job Role (e.g. Sales Manager)">
+                <input type="text" class="custom-input mb-2" placeholder="Company (e.g. Tunisie Connect)">
+                <input type="text" class="custom-input mb-2" placeholder="Date & Location (e.g. Jan 2022 — Present)">
+                <textarea class="custom-input" rows="3" placeholder="Key responsibilities (use new lines for bullets)"></textarea>
+            </div>
+        </div>
+        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" onclick="addExperienceField()"><i class="bi bi-plus"></i> Add Experience</button>
+
+        <h3 class="section-title">Education</h3>
+        <div class="form-group">
+            <input type="text" class="custom-input mb-2" placeholder="Degree Name">
+            <input type="text" class="custom-input mb-2" placeholder="University & Dates">
+        </div>
+
+       <h3 class="section-title">Certificates</h3>
+<div id="cert-container">
+    <input type="text" class="custom-input mb-2 cert-input" placeholder="Certification Name">
+</div>
+<button type="button" class="btn-primary-gold btn-sm mb-2 rounded-pill" onclick="addCertField()">
+    <i class="bi bi-plus"></i> Add Certificate
+</button>
+
+<h3 class="section-title">Languages</h3>
+<div id="languages-container"> <input type="text" class="custom-input mb-2 lang-input" placeholder="Language">
+</div>
+<button type="button" class="btn-primary-gold btn-sm mb-5 rounded-pill" onclick="addLanguageField()">
+    <i class="bi bi-plus"></i> Add Language
+</button>
+       
+        <div class=" d-flex justify-content-center" onclick="generatePreview()">
+          <button class="btn btn-primary-theme rounded-pill px-5 py-3"><i class="bi bi-eye"></i> Live Preview</button></div>
+    </aside>
+
+    <main class="preview-panel">
+        <div class="preview-sticky-wrapper">
+            <div class="resume-canvas" id="live-preview">
+                <div class="text-center p-5">
+                    <p style="color: var(--color-text-secondary);">Fill the form to see your resume live...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
      <!-- first -->
-   <div class="template-sage">
+   <!-- <div class="template-sage">
     <div class="resume-bg-overlay">
         <div class="resume-card">
             
@@ -134,92 +222,84 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- second -->
-<div class="template-matteo">
+<!-- <div class="template-sarah">
     <div class="resume-wrapper">
-        <header class="header">
-            <div class="header-left">
-                <img src="assets/pic.jpg" alt="Matteo Ricci" class="profile-img">
-                <div class="name-box">
-                    <h1>Matteo Ricci</h1>
-                    <p class="job-title">Head of Operations</p>
+        <aside class="sidebar">
+            <h1 class="name-logo">SARAH<br>WATSON</h1>
+            <p class="role-title">Web Developer</p>
+
+            <div class="profile-frame">
+                <img src="assets/pic.jpg" alt="Sarah Watson" class="profile-img">
+            </div>
+
+            <div class="contact-details">
+                <p><i class="bi bi-geo-alt-fill"></i> Main Street 234354, New York</p>
+                <p><i class="bi bi-telephone-fill"></i> +123235245</p>
+                <p><i class="bi bi-envelope-fill"></i> hello@watson.org</p>
+            </div>
+
+            <div class="side-section">
+                <h3 class="side-heading"><i class="bi bi-headset"></i> Skills</h3>
+                <div class="skill-item"><span>JavaScript</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
+                <div class="skill-item"><span>TypeScript</span><div class="progress"><div class="bar" style="width: 85%;"></div></div></div>
+                <div class="skill-item"><span>HTML 5 and CSS 3</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
+                <div class="skill-item"><span>React.js</span><div class="progress"><div class="bar" style="width: 90%;"></div></div></div>
+                <div class="skill-item"><span>Next.js</span><div class="progress"><div class="bar" style="width: 80%;"></div></div></div>
+                <div class="skill-item"><span>Storybook</span><div class="progress"><div class="bar" style="width: 75%;"></div></div></div>
+            </div>
+
+            <div class="side-section">
+                <h3 class="side-heading"><i class="bi bi-globe"></i> Languages</h3>
+                <div class="skill-item"><span>English</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
+                <div class="skill-item"><span>Spanish</span><div class="progress"><div class="bar" style="width: 70%;"></div></div></div>
+            </div>
+
+            <div class="side-section">
+                <h3 class="side-heading"><i class="bi bi-hammer"></i> Favorite Quote</h3>
+                <p class="quote">"Great websites aren't built in a day; they are crafted with passion, dedication, and attention to detail."</p>
+            </div>
+        </aside>
+
+        <main class="main-body">
+            <p class="intro-text text-white">Driven and enthusiastic Web Developer with a strong passion for creating exceptional web experiences. Experienced in manual testing, test automation, tracking tools, and A/B testing. Quick learner, team player, and effective communicator. Proficient in Continuous Delivery tools. Familiar with Java and JSP.</p>
+
+            <section class="main-section">
+                <h3 class="main-heading"><i class="bi bi-briefcase-fill"></i> Professional Experience</h3>
+                <div class="job-entry">
+                    <p class="job-meta text-white"><strong>Google Inc., Web Developer</strong></p>
+                    <p class="date-loc text-white">05/2018 — present | Mountain View, California</p>
+                    <p class="text-white">Developed responsive and user-friendly websites utilizing HTML, CSS, and JavaScript resulting in improved user engagement and a 30% increase in site traffic. Collaborated with design and marketing teams to implement visual and interactive elements, resulting in visually stunning and highly functional websites.</p>
                 </div>
-            </div>
-            <div class="contact-grid">
-                <span><i class="bi bi-envelope-fill"></i> matteo.ricci@email.com</span>
-                <span><i class="bi bi-telephone-fill"></i> +39 347 618 2504</span>
-                <span><i class="bi bi-geo-alt-fill"></i> Milan, Italy</span>
-                <span><i class="bi bi-linkedin"></i> linkedin.com/in/matteo-ricci</span>
-                <span><i class="bi bi-flag-fill"></i> Italian</span>
-                <span><i class="bi bi-calendar-event-fill"></i> 10.09.1986</span>
-            </div>
-        </header>
 
-        <div class="main-body">
-            <aside class="left-col">
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-person-badge-fill"></i> SUMMARY</h3>
-                    <p>Operations leader with 12+ years of experience building efficient, scalable processes across logistics, customer operations, and service delivery...</p>
-                </section>
+                <div class="job-entry">
+                    <p class="job-meta text-white"><strong>Wing Aviation LLC, Junior Developer</strong></p>
+                    <p class="date-loc text-white">09/2016 — 04/2018 | Mountain View, California</p>
+                    <p class="text-white">Assisted in the development of front-end and back-end components for corporate websites, contributing to a 15% improvement in site usability. Collaborated with the development team to troubleshoot and resolve coding issues, resulting in a 10% reduction in application errors.</p>
+                </div>
+            </section>
 
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-lightbulb-fill"></i> SKILLS</h3>
-                    <ul class="simple-list">
-                        <li>Operations Strategy</li>
-                        <li>Process Optimization</li>
-                        <li>KPI Management</li>
-                        <li>Vendor Management</li>
-                    </ul>
-                </section>
+            <section class="main-section">
+                <h3 class="main-heading"><i class="bi bi-mortarboard-fill"></i> Education</h3>
+                <div class="job-entry">
+                    <p class="job-meta text-white"><strong>Bachelor of Science in Computer Science, San Francisco Bay University</strong></p>
+                    <p class="date-loc text-white">09/2014 — 06/2018</p>
+                </div>
+            </section>
 
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-globe"></i> LANGUAGES</h3>
-                    <p><strong>Italian:</strong> Native<br><strong>English:</strong> Fluent</p>
-                </section>
-            </aside>
-
-            <main class="right-col">
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-briefcase-fill"></i> PROFESSIONAL EXPERIENCE</h3>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <strong>Head of Operations,</strong> <span>LogiVera Solutions</span>
-                        </div>
-                        <div class="exp-sub">2021 — Present | Milan, Italy</div>
-                        <ul class="bullets">
-                            <li>Directed multi-site operations strategy across Italy, improving service consistency.</li>
-                            <li>Oversaw workforce planning and budget allocation for 150+ employees.</li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-briefcase-fill"></i> PROFESSIONAL EXPERIENCE</h3>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <strong>Head of Operations,</strong> <span>LogiVera Solutions</span>
-                        </div>
-                        <div class="exp-sub">2021 — Present | Milan, Italy</div>
-                        <ul class="bullets">
-                            <li>Directed multi-site operations strategy across Italy, improving service consistency.</li>
-                            <li>Oversaw workforce planning and budget allocation for 150+ employees.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="section">
-                    <h3 class="section-heading"><i class="bi bi-mortarboard-fill"></i> EDUCATION</h3>
-                    <div class="edu-item">
-                        <strong>SDA Bocconi School of Management</strong>
-                        <div class="exp-sub">Executive Certificate in Supply Chain Strategy | 2016</div>
-                    </div>
-                </section>
-            </main>
-        </div>
+            <section class="main-section">
+                <h3 class="main-heading"><i class="bi bi-cursor-fill"></i> Interests</h3>
+                <div class="interest-tags">
+                    <span>Travelling</span>
+                    <span>Playing Guitar</span>
+                </div>
+            </section>
+        </main>
     </div>
-</div>
+</div> -->
 <!-- third one -->
- <div class="template-yassine">
+ <!-- <div class="template-yassine">
     <div class="resume-container">
         <aside class="sidebar">
             <div class="header-section">
@@ -327,7 +407,8 @@
             </section>
         </main>
     </div>
-</div>
+</div> -->
+
     <footer class="custom-footer border-top mt-5">
       <div class="container py-5">
         <div class="row g-4">
