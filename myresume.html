@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My-Cv</title>
+    <title>MYCV | Builder</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,488 +18,128 @@
     <link rel="stylesheet" href="template.css" />
   </head>
   <body>
-    <!-- header -->
     <nav class="navbar navbar-expand-lg sticky-top custom-header">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <div class="logo-box me-2">
-            <span class="logo-inner"></span>
-          </div>
+          <div class="logo-box me-2"><span class="logo-inner"></span></div>
           <span class="logo-text">MY<span class="text-accent">CV</span></span>
         </a>
 
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-center">
-            <li class="nav-item">
-              <a class="nav-link px-3 fs-6" href="template.html">Templates</a>
-            </li>
-            <li class="nav-item ms-lg-4">
-              <a href="auth.html">
-                <button class="btn btn-outline-theme rounded-pill px-4 me-2">
-                  Login
-                </button>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="template.html"
-                ><button class="btn btn-primary-theme rounded-pill px-4">
-                  Get Started
-                </button></a
-              >
-            </li>
+            <li class="nav-item"><a class="nav-link px-3 fs-6" href="template.html">Templates</a></li>
+            <li class="nav-item ms-lg-4"><a class="btn btn-outline-theme rounded-pill px-4 me-2" href="auth.html">Login</a></li>
+            <li class="nav-item"><a class="btn btn-primary-theme rounded-pill px-4" href="template.html">Change Template</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- main section -->
-<div class="dashboard-container">
-    <aside class="input-panel custom-scrollbar">
-        <h3 class="section-title">Personal Identity</h3>
+
+    <main class="dashboard-container">
+      <aside class="input-panel custom-scrollbar">
+        <h1 class="section-title">Personal Identity</h1>
         <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" class="custom-input" id="input-name" placeholder="Yassine Ben Salem">
+          <label for="input-name">Full Name</label>
+          <input type="text" class="custom-input" id="input-name" placeholder="Yassine Ben Salem" />
         </div>
         <div class="form-group">
-            <label>Job Title</label>
-            <input type="text" class="custom-input" id="input-title" placeholder="Sales Manager">
+          <label for="input-title">Job Title</label>
+          <input type="text" class="custom-input" id="input-title" placeholder="Sales Manager" />
         </div>
 
-        <h3 class="section-title">Contact Links</h3>
+        <h2 class="section-title">Contact Links</h2>
         <div class="form-group">
-            <label><i class="bi bi-linkedin"></i> LinkedIn URL</label>
-            <input type="text" class="custom-input" id="input-linkedin" placeholder="linkedin.com/in/username">
+          <label for="input-linkedin"><i class="bi bi-linkedin"></i> LinkedIn URL</label>
+          <input type="text" class="custom-input" id="input-linkedin" placeholder="linkedin.com/in/username" />
         </div>
         <div class="form-group">
-            <label><i class="bi bi-envelope"></i> Email Address</label>
-            <input type="email" class="custom-input" id="input-email" placeholder="email@example.com">
+          <label for="input-email"><i class="bi bi-envelope"></i> Email Address</label>
+          <input type="email" class="custom-input" id="input-email" placeholder="email@example.com" />
         </div>
         <div class="form-group">
-            <label><i class="bi bi-telephone"></i> Phone Number</label>
-            <input type="text" class="custom-input" id="input-phone" placeholder="+216 55 482 731">
+          <label for="input-phone"><i class="bi bi-telephone"></i> Phone Number</label>
+          <input type="text" class="custom-input" id="input-phone" placeholder="+216 55 482 731" />
         </div>
         <div class="form-group">
-            <label><i class="bi bi-geo-alt"></i> Location</label>
-            <input type="text" class="custom-input" id="input-location" placeholder="Tunis, Tunisia">
-        </div>
-
-        <h3 class="section-title">Professional Summary</h3>
-        <div class="form-group">
-            <textarea class="custom-input" id="input-summary" rows="4" placeholder="Describe your professional background..."></textarea>
+          <label for="input-location"><i class="bi bi-geo-alt"></i> Location</label>
+          <input type="text" class="custom-input" id="input-location" placeholder="Tunis, Tunisia" />
         </div>
 
-        <h3 class="section-title">Skills</h3>
+        <h2 class="section-title">Professional Summary</h2>
+        <div class="form-group">
+          <label for="input-summary" class="visually-hidden">Professional Summary</label>
+          <textarea class="custom-input" id="input-summary" rows="4" placeholder="Describe your professional background..."></textarea>
+        </div>
+
+        <h2 class="section-title">Skills</h2>
         <div id="skills-container">
-            <input type="text" class="custom-input mb-2" id="input-skill" placeholder="e.g. Lead Generation">
+          <input type="text" class="custom-input mb-2 skill-input" placeholder="e.g. Lead Generation" />
         </div>
-        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" onclick="addSkillField()"><i class="bi bi-plus"></i> Add Skill</button>
+        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" type="button" data-builder-action="skill">
+          <i class="bi bi-plus"></i> Add Skill
+        </button>
 
-        <h3 class="section-title">Work Experience</h3>
+        <h2 class="section-title">Work Experience</h2>
         <div id="experience-container" class="mb-3">
-            <div class="card p-3 mb-3 bg-light border-0 shadow-sm">
-                <input type="text" class="custom-input mb-2" placeholder="Job Role (e.g. Sales Manager)">
-                <input type="text" class="custom-input mb-2" placeholder="Company (e.g. Tunisie Connect)">
-                <input type="text" class="custom-input mb-2" placeholder="Date & Location (e.g. Jan 2022 — Present)">
-                <textarea class="custom-input" rows="3" placeholder="Key responsibilities (use new lines for bullets)"></textarea>
-            </div>
+          <div class="card p-3 mb-3 bg-light border-0 shadow-sm exp-block">
+            <input type="text" class="custom-input mb-2 exp-role" placeholder="Job Role (e.g. Sales Manager)" />
+            <input type="text" class="custom-input mb-2 exp-company" placeholder="Company (e.g. Tunisie Connect)" />
+            <input type="text" class="custom-input mb-2 exp-date" placeholder="Date & Location (e.g. Jan 2022 - Present)" />
+            <textarea class="custom-input exp-desc" rows="3" placeholder="Key responsibilities (use new lines for bullets)"></textarea>
+          </div>
         </div>
-        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" onclick="addExperienceField()"><i class="bi bi-plus"></i> Add Experience</button>
+        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" type="button" data-builder-action="experience">
+          <i class="bi bi-plus"></i> Add Experience
+        </button>
 
-        <h3 class="section-title">Education</h3>
+        <h2 class="section-title">Education</h2>
         <div class="form-group">
-            <input type="text" class="custom-input mb-2" placeholder="Degree Name">
-            <input type="text" class="custom-input mb-2" placeholder="University & Dates">
+          <label for="input-degree" class="visually-hidden">Degree Name</label>
+          <input type="text" class="custom-input mb-2" id="input-degree" placeholder="Degree Name" />
+          <label for="input-education" class="visually-hidden">University and Dates</label>
+          <input type="text" class="custom-input mb-2" id="input-education" placeholder="University & Dates" />
         </div>
 
-       <h3 class="section-title">Certificates</h3>
-<div id="cert-container">
-    <input type="text" class="custom-input mb-2 cert-input" placeholder="Certification Name">
-</div>
-<button type="button" class="btn-primary-gold btn-sm mb-2 rounded-pill" onclick="addCertField()">
-    <i class="bi bi-plus"></i> Add Certificate
-</button>
+        <h2 class="section-title">Certificates</h2>
+        <div id="cert-container">
+          <input type="text" class="custom-input mb-2 cert-input" placeholder="Certification Name" />
+        </div>
+        <button class="btn-primary-gold btn-sm mb-4 rounded-pill" type="button" data-builder-action="certificate">
+          <i class="bi bi-plus"></i> Add Certificate
+        </button>
 
-<h3 class="section-title">Languages</h3>
-<div id="languages-container"> <input type="text" class="custom-input mb-2 lang-input" placeholder="Language">
-</div>
-<button type="button" class="btn-primary-gold btn-sm mb-5 rounded-pill" onclick="addLanguageField()">
-    <i class="bi bi-plus"></i> Add Language
-</button>
-       
-        <div class=" d-flex justify-content-center" onclick="generatePreview()">
-          <button class="btn btn-primary-theme rounded-pill px-5 py-3"><i class="bi bi-eye"></i> Live Preview</button></div>
-    </aside>
+        <h2 class="section-title">Languages</h2>
+        <div id="languages-container">
+          <input type="text" class="custom-input mb-2 lang-input" placeholder="Language" />
+        </div>
+        <button class="btn-primary-gold btn-sm mb-5 rounded-pill" type="button" data-builder-action="language">
+          <i class="bi bi-plus"></i> Add Language
+        </button>
 
-    <main class="preview-panel">
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary-theme rounded-pill px-5 py-3" type="button" data-builder-action="preview">
+            <i class="bi bi-eye"></i> Live Preview
+          </button>
+        </div>
+      </aside>
+
+      <section class="preview-panel" aria-label="Resume preview">
         <div class="preview-sticky-wrapper">
-            <div class="resume-canvas" id="live-preview">
-                <div class="text-center p-5">
-                    <p style="color: var(--color-text-secondary);">Fill the form to see your resume live...</p>
-                </div>
+          <div class="resume-canvas" id="live-preview">
+            <div class="text-center p-5">
+              <p style="color: var(--color-text-secondary)">Fill the form to see your resume live...</p>
             </div>
+          </div>
         </div>
+      </section>
     </main>
-</div>
 
-     <!-- first -->
-   <!-- <div class="template-sage">
-    <div class="resume-bg-overlay">
-        <div class="resume-card">
-            
-            <header class="sage-header">
-                <div class="header-main">
-                    <img src="assets/pic.jpg" class="sage-profile-img" alt="Catherine Bale">
-                    <div class="identity">
-                        <h1>Catherine Bale</h1>
-                        <p class="subtitle">Marketing Assistant</p>
-                        <div class="contact-info">
-                            <span><i class="bi bi-envelope"></i> c.bale@bale.com</span>
-                            <span><i class="bi bi-geo-alt"></i> 22611 Pacific Coast Hwy, Malibu California</span>
-                            <span><i class="bi bi-telephone"></i> +1+541+754-3010</span>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <div class="sage-content">
-                <section class="sage-section">
-                    <h3 class="sage-label"><i class="bi bi-person-vcard"></i> Profile</h3>
-                    <p>To obtain a challenging marketing position with a reputable company where I can utilize my marketing skills and experience to drive business growth.</p>
-                </section>
-
-                <section class="sage-section">
-                    <h3 class="sage-label"><i class="bi bi-briefcase"></i> Professional Experience</h3>
-                    <div class="exp-item">
-                        <div class="exp-row">
-                            <strong>Marketing Manager</strong>
-                            <span>2019 — present</span>
-                        </div>
-                        <div class="exp-row">
-                            <em>Acme Corporation</em>
-                            <span>Milwaukee</span>
-                        </div>
-                        <p>Developed and executed marketing strategies to increase brand awareness and drive sales.</p>
-                    </div>
-                </section>
-
-                <section class="sage-section">
-                    <h3 class="sage-label"><i class="bi bi-mortarboard"></i> Education</h3>
-                    <div class="edu-item">
-                        <div class="exp-row">
-                            <strong>Business Marketing</strong>
-                            <span>2014 — 2017</span>
-                        </div>
-                        <div class="exp-row">
-                            <em>University of Wisconsin</em>
-                            <span>Milwaukee</span>
-                        </div>
-                    </div>
-                </section>
-
-                <div class="sage-grid">
-                    <section class="sage-section">
-                        <h3 class="sage-label"><i class="bi bi-globe"></i> Languages</h3>
-                        <p><strong>English</strong> (C2) • <strong>Spanish</strong> (C2) • <strong>French</strong> (C2)</p>
-                    </section>
-                    <section class="sage-section">
-                        <h3 class="sage-label"><i class="bi bi-cpu"></i> Skills</h3>
-                        <p>Market research • Analytical thinking</p>
-                    </section>
-                </div>
-
-                <section class="sage-section">
-                    <h3 class="sage-label"><i class="bi bi-patch-check"></i> Certificates</h3>
-                    <p>Google Analytics Certified • HubSpot Inbound Marketing Certified</p>
-                </section>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- second -->
-<!-- <div class="template-sarah">
-    <div class="resume-wrapper">
-        <aside class="sidebar">
-            <h1 class="name-logo">SARAH<br>WATSON</h1>
-            <p class="role-title">Web Developer</p>
-
-            <div class="profile-frame">
-                <img src="assets/pic.jpg" alt="Sarah Watson" class="profile-img">
-            </div>
-
-            <div class="contact-details">
-                <p><i class="bi bi-geo-alt-fill"></i> Main Street 234354, New York</p>
-                <p><i class="bi bi-telephone-fill"></i> +123235245</p>
-                <p><i class="bi bi-envelope-fill"></i> hello@watson.org</p>
-            </div>
-
-            <div class="side-section">
-                <h3 class="side-heading"><i class="bi bi-headset"></i> Skills</h3>
-                <div class="skill-item"><span>JavaScript</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
-                <div class="skill-item"><span>TypeScript</span><div class="progress"><div class="bar" style="width: 85%;"></div></div></div>
-                <div class="skill-item"><span>HTML 5 and CSS 3</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
-                <div class="skill-item"><span>React.js</span><div class="progress"><div class="bar" style="width: 90%;"></div></div></div>
-                <div class="skill-item"><span>Next.js</span><div class="progress"><div class="bar" style="width: 80%;"></div></div></div>
-                <div class="skill-item"><span>Storybook</span><div class="progress"><div class="bar" style="width: 75%;"></div></div></div>
-            </div>
-
-            <div class="side-section">
-                <h3 class="side-heading"><i class="bi bi-globe"></i> Languages</h3>
-                <div class="skill-item"><span>English</span><div class="progress"><div class="bar" style="width: 100%;"></div></div></div>
-                <div class="skill-item"><span>Spanish</span><div class="progress"><div class="bar" style="width: 70%;"></div></div></div>
-            </div>
-
-            <div class="side-section">
-                <h3 class="side-heading"><i class="bi bi-hammer"></i> Favorite Quote</h3>
-                <p class="quote">"Great websites aren't built in a day; they are crafted with passion, dedication, and attention to detail."</p>
-            </div>
-        </aside>
-
-        <main class="main-body">
-            <p class="intro-text text-white">Driven and enthusiastic Web Developer with a strong passion for creating exceptional web experiences. Experienced in manual testing, test automation, tracking tools, and A/B testing. Quick learner, team player, and effective communicator. Proficient in Continuous Delivery tools. Familiar with Java and JSP.</p>
-
-            <section class="main-section">
-                <h3 class="main-heading"><i class="bi bi-briefcase-fill"></i> Professional Experience</h3>
-                <div class="job-entry">
-                    <p class="job-meta text-white"><strong>Google Inc., Web Developer</strong></p>
-                    <p class="date-loc text-white">05/2018 — present | Mountain View, California</p>
-                    <p class="text-white">Developed responsive and user-friendly websites utilizing HTML, CSS, and JavaScript resulting in improved user engagement and a 30% increase in site traffic. Collaborated with design and marketing teams to implement visual and interactive elements, resulting in visually stunning and highly functional websites.</p>
-                </div>
-
-                <div class="job-entry">
-                    <p class="job-meta text-white"><strong>Wing Aviation LLC, Junior Developer</strong></p>
-                    <p class="date-loc text-white">09/2016 — 04/2018 | Mountain View, California</p>
-                    <p class="text-white">Assisted in the development of front-end and back-end components for corporate websites, contributing to a 15% improvement in site usability. Collaborated with the development team to troubleshoot and resolve coding issues, resulting in a 10% reduction in application errors.</p>
-                </div>
-            </section>
-
-            <section class="main-section">
-                <h3 class="main-heading"><i class="bi bi-mortarboard-fill"></i> Education</h3>
-                <div class="job-entry">
-                    <p class="job-meta text-white"><strong>Bachelor of Science in Computer Science, San Francisco Bay University</strong></p>
-                    <p class="date-loc text-white">09/2014 — 06/2018</p>
-                </div>
-            </section>
-
-            <section class="main-section">
-                <h3 class="main-heading"><i class="bi bi-cursor-fill"></i> Interests</h3>
-                <div class="interest-tags">
-                    <span>Travelling</span>
-                    <span>Playing Guitar</span>
-                </div>
-            </section>
-        </main>
-    </div>
-</div> -->
-<!-- third one -->
- <!-- <div class="template-yassine">
-    <div class="resume-container">
-        <aside class="sidebar">
-            <div class="header-section">
-                <h1 class="name">Yassine Ben Salem</h1>
-                <p class="title">Sales Manager</p>
-            </div>
-
-            <div class="contact-list">
-                <div class="contact-item"><i class="bi bi-linkedin"></i> linkedin.com/in/yassine-bensalem</div>
-                <div class="contact-item"><i class="bi bi-envelope"></i> yassine.bensalem@email.com</div>
-                <div class="contact-item"><i class="bi bi-telephone"></i> +216 55 482 731</div>
-                <div class="contact-item"><i class="bi bi-geo-alt"></i> Tunis, Tunisia</div>
-            </div>
-
-            <section class="side-block">
-                <h3 class="side-label">Summary</h3>
-                <p class="text-white">Results-driven Sales Manager with 6+ years of experience in B2B sales, account development, and client relationship management across telecom and business services markets. Strong track record in growing revenue, improving conversion rates, and building long-term partnerships with corporate clients.</p>
-            </section>
-
-            <section class="side-block">
-                <h3 class="side-label">Skills</h3>
-                <ul class="side-list">
-                    <li>Account Management</li>
-                    <li>Lead Generation</li>
-                    <li>Negotiation</li>
-                    <li>CRM Management</li>
-                    <li>Sales Forecasting</li>
-                    <li>Client Retention</li>
-                    <li>Pipeline Development</li>
-                </ul>
-            </section>
-
-            <section class="side-block">
-                <h3 class="side-label">Languages</h3>
-                <div class="lang-box"><strong>Arabic</strong><br>Native</div>
-                <div class="lang-box"><strong>French</strong><br>Fluent</div>
-                <div class="lang-box"><strong>English</strong><br>Proficient</div>
-            </section>
-        </aside>
-
-        <main class="main-content">
-            <section class="main-section">
-                <h3 class="main-label">Professional Experience</h3>
-                
-                <div class="exp-item">
-                    <div class="exp-head">
-                        <strong>Sales Manager</strong>, <span>Tunisie Connect</span>
-                    </div>
-                    <div class="exp-date">January 2022 — Present | Tunis, Tunisia</div>
-                    <ul class="exp-bullets">
-                        <li>Manage a portfolio of key business accounts across the Tunis region.</li>
-                        <li>Lead quarterly sales planning and improved team conversion rates by 18%.</li>
-                        <li>Deliver tailored proposals and contract renewals for SME and enterprise clients.</li>
-                    </ul>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-head">
-                        <strong>Sales Manager</strong>, <span>Tunisie Connect</span>
-                    </div>
-                    <div class="exp-date">January 2022 — Present | Tunis, Tunisia</div>
-                    <ul class="exp-bullets">
-                        <li>Manage a portfolio of key business accounts across the Tunis region.</li>
-                        <li>Lead quarterly sales planning and improved team conversion rates by 18%.</li>
-                        <li>Deliver tailored proposals and contract renewals for SME and enterprise clients.</li>
-                    </ul>
-                </div>
-
-                <div class="exp-item">
-                    <div class="exp-head">
-                        <strong>Senior Sales Executive</strong>, <span>Maghreb Business Solutions</span>
-                    </div>
-                    <div class="exp-date">March 2019 — December 2021 | Tunis, Tunisia</div>
-                    <ul class="exp-bullets">
-                        <li>Owned full sales cycle from prospecting to negotiation and closing.</li>
-                        <li>Increased monthly new client acquisition through structured outbound campaigns.</li>
-                    </ul>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-head">
-                        <strong>Senior Sales Executive</strong>, <span>Maghreb Business Solutions</span>
-                    </div>
-                    <div class="exp-date">March 2019 — December 2021 | Tunis, Tunisia</div>
-                    <ul class="exp-bullets">
-                        <li>Owned full sales cycle from prospecting to negotiation and closing.</li>
-                        <li>Increased monthly new client acquisition through structured outbound campaigns.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="main-section">
-                <h3 class="main-label">Education</h3>
-                <div class="edu-item">
-                    <strong>Master's Degree in Marketing and Commercial Management</strong>, <span>Tunis Business School</span>
-                    <div class="exp-date">2015 — 2017 | Tunis, Tunisia</div>
-                </div>
-            </section>
-
-            <section class="main-section">
-                <h3 class="main-label">Certificates</h3>
-                <ul class="cert-list">
-                    <li>Certified Professional Sales Person (CPSP)</li>
-                    <li>HubSpot Sales Software Certification</li>
-                    <li>Google Digital Sales Certification</li>
-                </ul>
-            </section>
-        </main>
-    </div>
-</div> -->
-
-    <footer class="custom-footer border-top mt-5">
-      <div class="container py-5">
-        <div class="row g-4">
-          <div class="col-lg-4 col-md-12">
-            <a class="navbar-brand d-flex align-items-center mb-3" href="#">
-              <div class="logo-box me-2" style="transform: scale(0.8)">
-                <span class="logo-inner"></span>
-              </div>
-              <span class="logo-text text-primary"
-                >MY<span class="text-accent">CV</span></span
-              >
-            </a>
-            <p class="footer-desc text-secondary font-sans pe-lg-5">
-              Building a career-defining resume shouldn't be hard. We help you
-              create high-impact designs that get you hired.
-            </p>
-            <div class="social-links d-flex gap-3 mt-4">
-              <a href="#" class="social-icon-light"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-              <a href="#" class="social-icon-light"
-                ><i class="bi bi-twitter-x"></i
-              ></a>
-              <a href="#" class="social-icon-light"
-                ><i class="bi bi-instagram"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <h6 class="footer-heading font-sans-bold text-primary mb-4">
-              PLATFORM
-            </h6>
-            <ul class="list-unstyled footer-links-light">
-              <li><a href="template.html">Templates</a></li>
-              <li><a href="template.html">Examples</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6">
-            <h6 class="footer-heading font-sans-bold text-primary mb-4">
-              RESOURCES
-            </h6>
-            <ul class="list-unstyled footer-links-light">
-              <li><a href="resumeguide.html">Resume Guide</a></li>
-              <li><a href="resumeguide.html">CV Tips</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-4">
-            <h6 class="footer-heading font-sans-bold text-primary mb-4">
-              STAY UPDATED
-            </h6>
-            <p class="text-secondary small mb-3">
-              Join 10,000+ professionals for career tips.
-            </p>
-            <div class="newsletter-group d-flex">
-              <input
-                type="email"
-                class="form-control newsletter-input-light"
-                placeholder="Your email"
-              />
-              <button class="btn btn-primary-theme ms-2 px-3">
-                <i class="bi bi-send text-white"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <hr class="footer-divider-light mt-5 mb-4" />
-
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0 text-muted small">
-              © 2026 MYCV. Built with
-              <i class="bi bi-heart-fill text-danger"></i>
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <a
-              href="privacy.html"
-              class="text-muted small text-decoration-none me-3"
-              >Privacy Policy</a
-            >
-            <a href="privacy.html" class="text-muted small text-decoration-none"
-              >Terms</a
-            >
-          </div>
-        </div>
-      </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script src="app.js"></script>
   </body>
 </html>

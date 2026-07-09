@@ -1,180 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My-Cv</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-        <!-- header -->
-<nav class="navbar navbar-expand-lg sticky-top custom-header">
-    <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MYCV | Templates</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top custom-header">
+      <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <div class="logo-box me-2">
-                <span class="logo-inner"></span>
-            </div>
-            <span class="logo-text">MY<span class="text-accent">CV</span></span>
+          <div class="logo-box me-2"><span class="logo-inner"></span></div>
+          <span class="logo-text">MY<span class="text-accent">CV</span></span>
         </a>
 
-        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link px-3 fs-6" href="template.html">Templates</a>
-                </li>
-                <li class="nav-item ms-lg-4">
-                    <a href="auth.html">
-                        <button class="btn btn-outline-theme rounded-pill px-4 me-2">Login</button>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="template.html"><button class="btn btn-primary-theme rounded-pill px-4">Get Started</button></a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link px-3 fs-6" href="template.html">Templates</a></li>
+            <li class="nav-item ms-lg-4"><a class="btn btn-outline-theme rounded-pill px-4 me-2" href="auth.html">Login</a></li>
+            <li class="nav-item"><a class="btn btn-primary-theme rounded-pill px-4" href="template.html">Get Started</a></li>
+          </ul>
         </div>
-    </div>
-</nav>
-    <!-- hero section -->
-    <section class="template-gallery py-5">
-    <div class="container mt-4">
+      </div>
+    </nav>
+
+    <main class="template-gallery py-5">
+      <div class="container mt-4">
         <div class="text-center mb-5">
-            <h2 class="font-serif display-5 text-primary mb-3 fw-bold colorMain">Choose Your <span class="text-accent">Template</span></h2>
-            <p class="text-muted mx-auto" style="max-width: 600px;">
-                Select a professional, ATS-friendly design to start building your resume. You can always change it later.
-            </p>
+          <h1 class="font-serif display-5 text-primary mb-3 fw-bold colorMain">
+            Choose Your <span class="text-accent">Template</span>
+          </h1>
+          <p class="text-muted mx-auto" style="max-width: 600px">
+            Select a professional, ATS-friendly design to start building your resume. You can always change it later.
+          </p>
         </div>
 
         <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
-            <button class="btn btn-filter active rounded-pill px-4 py-2" onclick="showAll()">All Templates</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showPro()">Professional</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showMd()">Modern</button>
-            <button class="btn btn-filter rounded-pill px-4 py-2" onclick="showCr()">Creative</button>
+          <button class="btn btn-filter active rounded-pill px-4 py-2" type="button" data-filter="all">All Templates</button>
+          <button class="btn btn-filter rounded-pill px-4 py-2" type="button" data-filter="professional">Professional</button>
+          <button class="btn btn-filter rounded-pill px-4 py-2" type="button" data-filter="modern">Modern</button>
+          <button class="btn btn-filter rounded-pill px-4 py-2" type="button" data-filter="creative">Creative</button>
         </div>
 
         <div class="row g-4">
-            <div class="col-md-6 col-lg-4" id="card1">
-                <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="template-img-container">
-                        <img src="assets/green.png" class="card-img-top" alt="Template Preview">
-                        <div class="template-overlay">
-                        <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderPro()">Use Template</button>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
-                        <div>
-                            <h5 class="card-title mb-0 font-sans fw-bold">Executive Dark</h5>
-                            <span class="badge bg-accent-subtle text-primary x-small">Professional</span>
-                        </div>
-                        <i class="bi bi-heart text-muted hover-accent" style="cursor: pointer;"></i>
-                    </div>
+          <div class="col-md-6 col-lg-4" id="card1">
+            <article class="template-card card h-100 border-0 shadow-sm overflow-hidden">
+              <div class="template-img-container">
+                <img src="assets/green.png" class="card-img-top" alt="Executive Dark resume template preview" />
+                <div class="template-overlay">
+                  <button class="btn btn-primary-theme rounded-pill px-4 py-2" type="button" data-template-select="yassine">Use Template</button>
                 </div>
-            </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
+                <div>
+                  <h2 class="card-title h5 mb-0 font-sans fw-bold">Executive Dark</h2>
+                  <span class="badge bg-accent-subtle text-primary x-small">Professional</span>
+                </div>
+                <i class="bi bi-heart text-muted hover-accent" aria-hidden="true"></i>
+              </div>
+            </article>
+          </div>
 
-            <div id="card2" class="col-md-6 col-lg-4">
-                <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="template-img-container">
-                        <img src="assets/pastel.png" class="card-img-top" alt="Template Preview">
-                        <div class="template-overlay">
-                           <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderMd()">Use Template</button>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
-                        <div>
-                            <h5 class="card-title mb-0 font-sans fw-bold">Modern Minimal</h5>
-                            <span class="badge bg-accent-subtle text-primary x-small">Modern</span>
-                        </div>
-                        <i class="bi bi-heart text-muted hover-accent" style="cursor: pointer;"></i>
-                    </div>
+          <div class="col-md-6 col-lg-4" id="card2">
+            <article class="template-card card h-100 border-0 shadow-sm overflow-hidden">
+              <div class="template-img-container">
+                <img src="assets/pastel.png" class="card-img-top" alt="Modern Minimal resume template preview" />
+                <div class="template-overlay">
+                  <button class="btn btn-primary-theme rounded-pill px-4 py-2" type="button" data-template-select="sage">Use Template</button>
                 </div>
-            </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
+                <div>
+                  <h2 class="card-title h5 mb-0 font-sans fw-bold">Modern Minimal</h2>
+                  <span class="badge bg-accent-subtle text-primary x-small">Modern</span>
+                </div>
+                <i class="bi bi-heart text-muted hover-accent" aria-hidden="true"></i>
+              </div>
+            </article>
+          </div>
 
-            <div id="card3" class="col-md-6 col-lg-4">
-                <div class="template-card card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="template-img-container">
-                        <img src="assets/yekk.png" class="card-img-top" alt="Template Preview">
-                        <div class="template-overlay">
-                            <button class="btn btn-primary-theme rounded-pill px-4 py-2" onclick="renderCr()">Use Template</button>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
-                        <div>
-                            <h5 class="card-title mb-0 font-sans fw-bold">Creative Gold</h5>
-                            <span class="badge bg-accent-subtle text-primary x-small">Creative</span>
-                        </div>
-                        <i class="bi bi-heart text-muted hover-accent" style="cursor: pointer;"></i>
-                    </div>
+          <div class="col-md-6 col-lg-4" id="card3">
+            <article class="template-card card h-100 border-0 shadow-sm overflow-hidden">
+              <div class="template-img-container">
+                <img src="assets/yekk.png" class="card-img-top" alt="Creative Gold resume template preview" />
+                <div class="template-overlay">
+                  <button class="btn btn-primary-theme rounded-pill px-4 py-2" type="button" data-template-select="sarah">Use Template</button>
                 </div>
-            </div>
+              </div>
+              <div class="card-body d-flex justify-content-between align-items-center bg-white px-4 py-3">
+                <div>
+                  <h2 class="card-title h5 mb-0 font-sans fw-bold">Creative Gold</h2>
+                  <span class="badge bg-accent-subtle text-primary x-small">Creative</span>
+                </div>
+                <i class="bi bi-heart text-muted hover-accent" aria-hidden="true"></i>
+              </div>
+            </article>
+          </div>
         </div>
-    </div>
-</section>
-<!-- footer -->
-<footer class="custom-footer border-top mt-5">
-    <div class="container py-5">
+      </div>
+    </main>
+
+    <footer class="custom-footer border-top mt-5">
+      <div class="container py-5">
         <div class="row g-4">
-            <div class="col-lg-4 col-md-12">
-                <a class="navbar-brand d-flex align-items-center mb-3" href="#">
-                    <div class="logo-box me-2" style="transform: scale(0.8);">
-                        <span class="logo-inner"></span>
-                    </div>
-                    <span class="logo-text text-primary">MY<span class="text-accent">CV</span></span>
-                </a>
-                <p class="footer-desc text-secondary font-sans pe-lg-5">
-                    Building a career-defining resume shouldn't be hard. We help you create high-impact designs that get you hired.
-                </p>
-                <div class="social-links d-flex gap-3 mt-4">
-                    <a href="#" class="social-icon-light"><i class="bi bi-linkedin"></i></a>
-                    <a href="#" class="social-icon-light"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#" class="social-icon-light"><i class="bi bi-instagram"></i></a>
-                </div>
+          <div class="col-lg-4 col-md-12">
+            <a class="navbar-brand d-flex align-items-center mb-3" href="index.html">
+              <div class="logo-box me-2" style="transform: scale(0.8)"><span class="logo-inner"></span></div>
+              <span class="logo-text text-primary">MY<span class="text-accent">CV</span></span>
+            </a>
+            <p class="footer-desc text-secondary font-sans pe-lg-5">
+              Building a career-defining resume should not be hard. We help you create high-impact designs that get you hired.
+            </p>
+            <div class="social-links d-flex gap-3 mt-4">
+              <a href="#" class="social-icon-light" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon-light" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-icon-light" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
             </div>
-
-            <div class="col-lg-2 col-md-4 col-6">
-                <h6 class="footer-heading font-sans-bold text-primary mb-4">PLATFORM</h6>
-                <ul class="list-unstyled footer-links-light">
-                    <li><a href="template.html">Templates</a></li>
-                    <li><a href="template.html">Examples</a></li>
-            
-                </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <h6 class="footer-heading font-sans-bold text-primary mb-4">PLATFORM</h6>
+            <ul class="list-unstyled footer-links-light">
+              <li><a href="template.html">Templates</a></li>
+              <li><a href="template.html">Examples</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <h6 class="footer-heading font-sans-bold text-primary mb-4">RESOURCES</h6>
+            <ul class="list-unstyled footer-links-light">
+              <li><a href="resumeguide.html">Resume Guide</a></li>
+              <li><a href="resumeguide.html">CV Tips</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h6 class="footer-heading font-sans-bold text-primary mb-4">STAY UPDATED</h6>
+            <p class="text-secondary small mb-3">Join 10,000+ professionals for career tips.</p>
+            <div class="newsletter-group d-flex">
+              <input type="email" class="form-control newsletter-input-light" placeholder="Your email" />
+              <button class="btn btn-primary-theme ms-2 px-3" type="button" aria-label="Subscribe"><i class="bi bi-send text-white"></i></button>
             </div>
-
-            <div class="col-lg-2 col-md-4 col-6">
-                <h6 class="footer-heading font-sans-bold text-primary mb-4">RESOURCES</h6>
-                <ul class="list-unstyled footer-links-light">
-                    <li><a href="resumeguide.html">Resume Guide</a></li>
-                    <li><a href="resumeguide.html">CV Tips</a></li>
-                    
-                </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-4">
-                <h6 class="footer-heading font-sans-bold text-primary mb-4">STAY UPDATED</h6>
-                <p class="text-secondary small mb-3">Join 10,000+ professionals for career tips.</p>
-                <div class="newsletter-group d-flex">
-                    <input type="email" class="form-control newsletter-input-light" placeholder="Your email">
-                    <button class="btn btn-primary-theme ms-2 px-3"><i class="bi bi-send text-white"></i></button>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <hr class="footer-divider-light mt-5 mb-4">
-
+        <hr class="footer-divider-light mt-5 mb-4" />
         <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="mb-0 text-muted small">© 2026 MYCV. Built with <i class="bi bi-heart-fill text-danger"></i></p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <a href="privacy.html" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
-                <a href="privacy.html" class="text-muted small text-decoration-none">Terms</a>
-            </div>
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0 text-muted small">&copy; 2026 MYCV. Built with <i class="bi bi-heart-fill text-danger"></i></p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="privacy.html" class="text-muted small text-decoration-none me-3">Privacy Policy</a>
+            <a href="privacy.html" class="text-muted small text-decoration-none">Terms</a>
+          </div>
         </div>
-    </div>
-</footer>
-<script src="app.js"></script>
-</body>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
