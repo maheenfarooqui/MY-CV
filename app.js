@@ -212,6 +212,7 @@ function renderYassine() {
     </div>`;
 }
 
+// render sage
 function renderSage() {
   const data = getFormData();
   const skillsText = renderInlineList(data.skills, "Skill not specified");
